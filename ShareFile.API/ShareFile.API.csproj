@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Microsoft.OpenApi.Models;" />
+		<Using Include="ShareFile.API.Configuration;"/>
+		<Using Include="ShareFile.API.Configuration;"/>
+		<Using Include="Microsoft.AspNetCore.StaticFiles;"/>
+		<Using Include="ShareFile.API.Configuration;"/>
+	</ItemGroup>
+
+</Project>
