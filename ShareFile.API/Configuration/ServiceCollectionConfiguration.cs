@@ -2,9 +2,8 @@
 
 public static class ServiceCollectionConfiguration
 {
-    public static IServiceCollection InjectServices(this ServiceCollection services)
+    public static void InjectServices(this IServiceCollection services)
     {
         services.AddSingleton<FileExtensionContentTypeProvider>();
-        return services;
     }
 }

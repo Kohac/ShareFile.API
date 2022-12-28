@@ -7,12 +7,18 @@ public class FileController : ControllerBase
 {
     private readonly FileExtensionContentTypeProvider _fileExtensionContentTypeProvider;
     private string? _filePath;
+
     public FileController(FileExtensionContentTypeProvider fileExtensionContentTypeProvider)
     {
         _fileExtensionContentTypeProvider = fileExtensionContentTypeProvider ?? throw new ArgumentNullException(nameof(fileExtensionContentTypeProvider));
     }
+    /// <summary>
+    /// Get File
+    /// </summary>
+    /// <param name="id">Id of file to return</param>
+    /// <returns>File</returns>
     [HttpGet("{id}")]
-    public ActionResult GetXlsxFile([FromRoute]int id)
+    public ActionResult GetFile([FromRoute]int id)
     {
         if(id > 50)
             _filePath = @"C:\temp\rules-of-hooks.pdf";

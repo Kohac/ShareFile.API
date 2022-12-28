@@ -4,6 +4,11 @@ namespace ShareFile.API.Configuration;
 
 public static class WebApplicationConfiguration
 {
+    /// <summary>
+    /// Use swagger
+    /// </summary>
+    /// <param name="app">WebApplication</param>
+    /// <returns>WebApplication</returns>
     public static WebApplication SwaggerConfiguration(this WebApplication app)
     {
         app.UseSwagger();
@@ -27,7 +32,11 @@ public static class WebApplicationConfiguration
         }
         return app;
     }
-
+    /// <summary>
+    /// Create flow for WebApplication (every use + run)
+    /// </summary>
+    /// <param name="app">WebApplication</param>
+    /// <returns>WebApplication</returns>
     public static WebApplication ApiFlowConfiguration(this WebApplication app)
     {
         app.UseHttpsRedirection();
