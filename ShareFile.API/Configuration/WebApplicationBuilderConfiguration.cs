@@ -22,6 +22,15 @@ public static class WebApplicationBuilderConfiguration
     /// <returns>WebApplicationBuilder</returns>
     public static WebApplicationBuilder BuildSwagger(this WebApplicationBuilder builder)
     {
+        builder.Services.AddCors(opt =>
+        {
+            opt.AddPolicy("FilePolicy", policy =>
+            {
+                policy.AllowAnyHeader();
+                policy.AllowAnyMethod();
+                policy.AllowAnyOrigin();
+            });
+        });
         builder.Services.AddSwaggerGen(o =>
         {
             o.SwaggerDoc(

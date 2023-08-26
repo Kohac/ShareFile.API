@@ -39,6 +39,7 @@ public static class WebApplicationConfiguration
     /// <returns>WebApplication</returns>
     public static WebApplication ApiFlowConfiguration(this WebApplication app)
     {
+        app.UseCors("FilePolicy");
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();
